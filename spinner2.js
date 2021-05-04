@@ -1,9 +1,9 @@
 const spinnerArray = ['\r|   ', '\r/   ', '\r-   ', '\r\\   ', '\r|    '];
 let delayTime = 100;
 
-for (let i = 0; i < spinnerArray.length; i++) {
+for (const spinner in spinnerArray) {
   setTimeout(() => {
-    process.stdout.write(spinnerArray[i]);
+    process.stdout.write(spinnerArray[spinner]);
   }, delayTime);
   delayTime += 200;
 };
